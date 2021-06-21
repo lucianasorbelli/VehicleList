@@ -23,8 +23,8 @@ class MapViewModel {
         return singleVehicle?.lastPosition?.lng ?? Double()
     }
     
-    func getNickname() -> String {
-        return singleVehicle?.nickname ?? String()
+    func getNickname() -> String? {
+        return singleVehicle?.nickname
     }
     
     func getLicense() -> String {
