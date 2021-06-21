@@ -32,7 +32,7 @@ extension InitialViewController: UITableViewDataSource {
             vm.initFetch(vehicle: vehicleOk)
             cell.nicknameLabel.text = vm.getNickname()
             cell.licenseLabel.text = vm.getLicense()
-            cell.brandAndModelLabel.text = "\(vm.getBrand()), \(vm.getModel())"
+            cell.brandAndModelLabel.text = vm.getBrandAndModel()
             (distance != String()) ? (cell.distanceMtrs.setTitle(distance, for: .normal)) : (cell.distanceMtrs.isHidden = true)
         }
         return cell

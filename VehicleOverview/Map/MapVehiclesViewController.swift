@@ -57,7 +57,7 @@ class MapVehiclesViewController: UIViewController, GMSMapViewDelegate, CLLocatio
     func setupMap(){
         let position = CLLocationCoordinate2DMake(viewModel.getLatitude(), viewModel.getLongitude())
         let marker = GMSMarker(position: position)
-        marker.title = "\((viewModel.getNickname()) ?? (viewModel.getBrand()))"
+        marker.title = "\((viewModel.getNickname()) ?? (viewModel.getBrandAndModel()))"
         marker.snippet = "\(("LICENSE".localized(tableName: "Strings"))): \(viewModel.getLicense())"
         marker.map = self.mapGoogleView
         mapGoogleView.selectedMarker = marker
