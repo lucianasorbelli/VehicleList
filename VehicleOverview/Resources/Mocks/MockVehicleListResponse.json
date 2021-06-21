@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "licensePlate": "B AB 123",
+        "brand": "BMW",
+        "model": "i3",
+        "nickname": "Vimcent",
+        "last_position": {
+            "timestamp": "2021-01-10T20:04:22Z",
+            "lat": 51.54987,
+            "lng": 12.41039
+        }
+    },
+    {
+        "id": 2,
+        "licensePlate": "A UD 18",
+        "brand": "Audi",
+        "model": "A8",
+        "nickname": null,
+        "last_position": {
+            "timestamp": "2020-12-15T12:12:22Z",
+            "lat": 51.54987,
+            "lng": 10.983023
+        }
+    },
+    {
+        "id": 3,
+        "licensePlate": "123 XCU",
+        "brand": "Jeep",
+        "model": "Wrangler",
+        "nickname": "Jeep",
+        "last_position": {
+            "timestamp": "2020-12-30T15:04:11Z",
+            "lat": 51.038372,
+            "lng": 6.656303
+        }
+    },
+    {
+        "id": 4,
+        "licensePlate": "B TE 354 E",
+        "brand": "Tesla",
+        "model": "Model 3",
+        "nickname": "🚘",
+        "last_position": {
+            "timestamp": 1609504496,
+            "lat": 53.485186,
+            "lng": 10.059922
+        }
+    }
+]

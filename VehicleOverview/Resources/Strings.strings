@@ -1,0 +1,10 @@
+/* 
+  Strings.strings
+  VehicleOverview
+
+  Created by Sorbelli, Luciana Brenda on 19/06/2021.
+  
+*/
+
+"NAV_TITLE" = "Vehicles List";
+"LICENSE" = "License Plate";
