@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapVehiclesViewController" customModule="VehicleOverview" customModuleProvider="target">
             <connections>
+                <outlet property="centerCarButton" destination="RH6-lG-hfR" id="XCA-21-BcZ"/>
                 <outlet property="closeButton" destination="uGZ-4X-scv" id="y2P-xH-OE9"/>
                 <outlet property="mapGoogleView" destination="Hm4-JM-SxI" id="UGh-0z-G2p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -49,6 +50,9 @@
                             <state key="normal" image="carIcon2">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="medium"/>
                             </state>
+                            <connections>
+                                <action selector="centerCarButtonDidTap:" destination="-1" eventType="touchUpInside" id="EvM-pV-h5W"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

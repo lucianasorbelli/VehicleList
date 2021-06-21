@@ -20,6 +20,8 @@ class MapVehiclesViewController: UIViewController, GMSMapViewDelegate, CLLocatio
     @IBOutlet weak var mapGoogleView: GMSMapView!
     @IBOutlet weak var closeButton: UIButton!
     
+    @IBOutlet weak var centerCarButton: UIButton!
+    
     convenience init(vehicle: Vehicle){
         self.init()
         self.vehicleToShow = vehicle
@@ -54,6 +56,9 @@ class MapVehiclesViewController: UIViewController, GMSMapViewDelegate, CLLocatio
         mapGoogleView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: viewModel.getLatitude(), longitude: viewModel.getLongitude()), zoom: 11, bearing: 0, viewingAngle: 0)
     }
     
+    @IBAction func centerCarButtonDidTap(_ sender: Any) {
+       mapGoogleView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: viewModel.getLatitude(), longitude: viewModel.getLongitude()), zoom: 11, bearing: 0, viewingAngle: 0)
+    }
     func setupMap(){
         let position = CLLocationCoordinate2DMake(viewModel.getLatitude(), viewModel.getLongitude())
         let marker = GMSMarker(position: position)
