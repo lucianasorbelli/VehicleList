@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import VehicleOverview
 
 class VehicleOverviewTests: XCTestCase {
@@ -76,6 +77,26 @@ class VehicleOverviewTests: XCTestCase {
                 XCTFail("waitForExpectationsWithTimeout error: \(err)")
             }
         }
+    }
+    
+    func test_get_distance_vehicle_far(){
+        let lastPosition = LastPosition(lat: -34.5472104 , lng: -58.4418859 )
+        let vehicle = Vehicle(id: 12, licensePlate: "AD 138 HR", brand: "Audi", model: "Model1", nickname: "LuliCar", lastPosition: lastPosition)
+        let vm = MapViewModel()
+        vm.initFetch(vehicle: vehicle)
+        
+        let currentLocation =  CLLocation(latitude: -34.5863676 , longitude: -58.5108578)
+        XCTAssertEqual(vm.getDistanceFrom(currentLocation: currentLocation ), "7 kms.")
+    }
+    
+    func test_get_distance_vehicle_short(){
+        let lastPosition = LastPosition(lat: -34.5472104 , lng: -58.4418859 )
+        let vehicle = Vehicle(id: 12, licensePlate: "AD 138 HR", brand: "Audi", model: "Model1", nickname: "LuliCar", lastPosition: lastPosition)
+        let vm = MapViewModel()
+        vm.initFetch(vehicle: vehicle)
+        
+        let currentLocation =  CLLocation(latitude: -34.5472104 , longitude: -58.4418859)
+        XCTAssertEqual(vm.getDistanceFrom(currentLocation: currentLocation ), "0 kms.")
     }
     
     func testPerformanceExample() throws {

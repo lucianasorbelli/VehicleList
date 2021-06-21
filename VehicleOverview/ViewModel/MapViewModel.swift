@@ -41,6 +41,6 @@ class MapViewModel {
     func getDistanceFrom(currentLocation: CLLocation?) -> String? {
         let vehicleLocation = CLLocation(latitude: self.getLatitude(), longitude: self.getLongitude())
         let distance = Int(currentLocation?.distance(from: vehicleLocation) ?? Double())/1000
-        return (distance == 0) ?  String() : "\(String(distance)) kms."
+        return "\(String(distance)) kms."
     }
 }
